@@ -1,0 +1,44 @@
+﻿<Window x:Class="WPFBigExercise.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFBigExercise"
+        xmlns:loc="clr-namespace:WPFBigExercise.Infrastructure"
+        mc:Ignorable="d"
+        x:Name="mnWindow"
+        Title="MainWindow" Height="450" Width="900">
+    <Window.Resources>
+        <loc:DataConverter x:Key="DataConvert"></loc:DataConverter>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListView ItemsSource="{Binding Sorted}" x:Name="ListViewSelected" Grid.ColumnSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Width="291"  DisplayMemberBinding="{Binding Name}">
+                        <GridViewColumnHeader HorizontalContentAlignment="Center" Command="{Binding SortCommand}" x:Name="name" CommandParameter="{Binding ElementName=name}" Tag="Name">Worker</GridViewColumnHeader>
+                    </GridViewColumn>
+                    <GridViewColumn Width="293" DisplayMemberBinding="{Binding Position}">
+                        <GridViewColumnHeader HorizontalContentAlignment="Center" Command="{Binding SortCommand}" x:Name="position" CommandParameter="{Binding ElementName=position}" Tag="Position">Position</GridViewColumnHeader>
+                    </GridViewColumn>
+                    <GridViewColumn Width="291" DisplayMemberBinding="{Binding DateOfBirth, Converter={StaticResource DataConvert}}">
+                        <GridViewColumnHeader HorizontalContentAlignment="Center" Command="{Binding SortCommand}" x:Name="age" CommandParameter="{Binding ElementName=age}" Tag="DateOfBirth" >Age</GridViewColumnHeader>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Command="{Binding AddCommand}" Grid.Row="1">Add</Button>
+        <Button Command="{Binding DelCommand}" CommandParameter="{Binding ElementName=ListViewSelected}" Grid.Row="1" Grid.Column="1">Remove</Button>
+        <Button Command="{Binding ChaCommand}" CommandParameter="{Binding ElementName=ListViewSelected}" Grid.Row="1" Grid.Column="2">Change Position</Button>
+        
+    </Grid>
+</Window>

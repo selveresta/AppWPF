@@ -1,0 +1,9 @@
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\bin\Debug\netcoreapp3.1\Workers.deps.json
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\bin\Debug\netcoreapp3.1\Workers.dll
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\bin\Debug\netcoreapp3.1\Workers.pdb
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\obj\Debug\netcoreapp3.1\Workers.csprojAssemblyReference.cache
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\obj\Debug\netcoreapp3.1\Workers.AssemblyInfoInputs.cache
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\obj\Debug\netcoreapp3.1\Workers.AssemblyInfo.cs
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\obj\Debug\netcoreapp3.1\Workers.csproj.CoreCompileInputs.cache
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\obj\Debug\netcoreapp3.1\Workers.dll
+C:\Users\Artem\source\repos\WPFBigExercise\Worker\obj\Debug\netcoreapp3.1\Workers.pdb
